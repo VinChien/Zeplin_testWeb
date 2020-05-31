@@ -15,6 +15,12 @@
 nav {
     // 固定
     position: fixed;
+    width: 1920px;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 
     // 導覽列內的盒子
     #box {
@@ -22,5 +28,23 @@ nav {
         width: 1200px;
         display: grid;
         grid-template-columns: 204px 351px 392px 120px 110px;
+
+        // box 內的 link
+        #link {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            // link 內的 a
+            a {
+                font-size: 18px;
+                font-weight: 100;
+            }
+        }
+
+        // box 內的 social
+        #social {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
