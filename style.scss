@@ -1,3 +1,6 @@
+$green: #49aa45;
+$gray333: #333333;
+
 // 清理格式
 * {
   margin: 0;
@@ -71,6 +74,7 @@ nav {
     #social {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      align-items: flex-end;
 
       a:nth-child(2) {
         text-align: right;
@@ -95,14 +99,45 @@ nav {
   }
 
   #news {
-      width: 1200px;
-      //置中對齊
-      margin: 0 auto;
-      //格線系統
-      display: grid;
-      //3個平均分配
-      grid-template-columns: repeat(3, 1fr);
-      //間距 20px
-      grid-gap: 20px;
+    width: 1200px;
+    //置中對齊
+    margin: 0 auto;
+    //格線系統
+    display: grid;
+    //3個平均分配
+    grid-template-columns: repeat(3, 1fr);
+    //間距 20px
+    grid-gap: 20px;
+
+    div {
+      background-color: white;
+      padding: 40px 30px;
+
+      h3 {
+        color: $green;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 3.6px;
+        text-align: center;
+        margin-bottom: 27px;
+      }
+
+      h4 {
+        font-size: 22px;
+        letter-spacing: 5.9px;
+        color: #000000;
+        text-align: center;
+      }
+
+      p {
+          color: $gray333;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 1.88;
+          letter-spacing: 4px;
+          text-align-last: left;
+          margin: 30px 0;
+      }
+    }
   }
 }
