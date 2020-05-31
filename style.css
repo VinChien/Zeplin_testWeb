@@ -104,12 +104,12 @@ nav #box #social a:nth-child(2) {
   grid-gap: 20px;
 }
 
-#contant #news div {
+#contant #news > div {
   background-color: white;
   padding: 40px 30px;
 }
 
-#contant #news div h3 {
+#contant #news > div h3 {
   color: #49aa45;
   font-size: 12px;
   font-weight: 300;
@@ -118,25 +118,50 @@ nav #box #social a:nth-child(2) {
   margin-bottom: 27px;
 }
 
-#contant #news div h4 {
+#contant #news > div h4 {
   font-size: 22px;
   letter-spacing: 5.9px;
   color: #000000;
   text-align: center;
 }
 
-#contant #news div hr {
+#contant #news > div hr {
   border: 0.5px solid #000;
   width: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#contant #news div:hover hr {
+#contant #news > div div {
+  position: relative;
+  font-size: 0;
+}
+
+#contant #news > div div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#contant #news > div img {
   width: 100%;
 }
 
-#contant #news div p {
+#contant #news > div:hover hr {
+  width: 100%;
+}
+
+#contant #news > div:hover div::before {
+  opacity: 0.5;
+}
+
+#contant #news > div p {
   color: #333333;
   font-size: 15px;
   font-weight: 300;

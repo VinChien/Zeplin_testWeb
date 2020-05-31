@@ -114,7 +114,8 @@ nav {
     //間距 20px
     grid-gap: 20px;
 
-    div {
+    // >div 第一層的div
+    > div {
       background-color: white;
       padding: 40px 30px;
 
@@ -140,9 +141,38 @@ nav {
           transition: 0.5s;
       }
 
+      div {
+          position: relative;
+          //消除div裡面的間隙
+          font-size: 0;
+      }
+
+      //偽元素：填滿圖片半透明黑色區域 - 絕對區域
+      div::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: #000;
+          //定位左上點
+          z-index: 1;
+          //透明度
+          opacity: 0;
+          transition: 0.5s;
+      }
+
+      //圖片填滿 div 避免間隙
+      img {
+          width: 100%;
+      }
+
       &:hover {
           hr {
               width: 100%;
+          }
+
+          div::before {
+              opacity: 0.5;
           }
       }
 
