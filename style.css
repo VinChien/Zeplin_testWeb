@@ -25,6 +25,7 @@
 nav {
   position: fixed;
   width: 1920px;
+  background-color: rgba(110, 52, 5, 0.2);
 }
 
 nav a {
