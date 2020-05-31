@@ -22,7 +22,7 @@ nav #box {
   width: 1200px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 204px 351px 392px 120px 110;
-      grid-template-columns: 204px 351px 392px 120px 110;
+  -ms-grid-columns: 204px 351px 392px 120px 110px;
+      grid-template-columns: 204px 351px 392px 120px 110px;
 }
 /*# sourceMappingURL=style.css.map */
