@@ -37,6 +37,8 @@ nav {
   position: fixed;
   width: 1920px;
   background-color: rgba(110, 52, 5,0.2);
+  //深度 數字越大越上層
+  z-index: 2;
 
   // 導覽列 內的 a
   a {
